@@ -1,11 +1,10 @@
-/*
- *本程式的限制：Google Apps Script有固定的執行時長限制，所以如果信件太多，可能會刪不完，要自己再次執行<-後續有提供一個auto_click_gmail_cleaner.py做自動點擊的工作
- * /
+// 本程式的限制：Google Apps Script有固定的執行時長限制，所以如果信件太多，可能會刪不完，要自己再次執行<-後續有提供一個auto_click_gmail_cleaner.py做自動點擊的工作
 
  // --- 設定區：請在此修改您要執行的操作 ---
 const CONFIG = {
   //TODO 改成您要搜尋的郵件關鍵字，語法和 Gmail 搜尋框完全相同
-  SEARCH_QUERY: "unsubscribe",
+  SEARCH_QUERY: 'from:{uber spotify facebook "聯邦證券"}', // 在此示範聯絡人or的語法
+  // 關鍵字則是'{uber spotify facebook "聯邦證券"}'
 
   // 您要執行的操作：'DELETE' (移至垃圾桶) 或 'ARCHIVE' (封存)
   OPERATION: 'DELETE', 
